@@ -30,19 +30,41 @@
 
 img {
 	transition: transform .5s;
+	/* transform-origin: 0 0; */
 }
 
 img:hover {
-	transform: rotate(-5deg);
+	transform: translate(50%);
 }
 
 /* -- Row 2 --------- */
 
+.photo img {
+	transform-origin: 0 0;
+}
 
+.photo:hover img {
+	transform: scale(1.2);
+}
 
 /* -- Row 3 --------- */
 
+.slide .photo-overlay,
+.slide img {
+	transition: transform .6s ease-out;
+}
 
+.slide .photo-overlay {
+	transform: translateX(-100%);
+}
+
+.slide:hover .photo-overlay {
+	transform: translateX(0);
+}
+
+.slide:hover img {
+	transform: translateX(100%);
+}
 
 /* -- Logo ---------- */
 
